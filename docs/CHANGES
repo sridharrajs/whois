@@ -1,0 +1,47 @@
+2010/10/11 - Uri Even-Chen <uri@speedy.net>
+             : changed links to http://www.speedywhois.com/ .
+             : released Speedy Whois version 0.1.4.
+
+2010/01/10 - Uri Even-Chen <uri@speedy.net>
+             : added "@" to PHPWhois before array variables, to eliminate PHP warnings if the array index doesn't exist.
+             : released Speedy Whois version 0.1.3.
+
+2010/01/03 - Uri Even-Chen <uri@speedy.net>
+             : upgraded to PHPWhois version 4.2.0 (phpwhois-4.2.0.tar.gz).
+             : updated phpwhoisutils/whois.utils.php .
+             : removed <pre> tag from index.php, and added <br /> to lines.
+             : released Speedy Whois version 0.1.2.
+
+2008/11/06 - Uri Even-Chen <uri@speedy.net>
+             : changed links to http://www.speedywhois.net/ .
+
+2008/03/13 - Uri Even-Chen <uri@speedy.net>
+             : Some changes in index.php.
+             : Removed google ads and links.
+             : Changed button text to "Check Domain".
+             : Removed whois.php icon and whois.icon.png.
+             : PHPWhois class not updated because of fatal bugs in latest version - old domain names which used to work don't work any more (for example - walla.co.il, isoc.org.il, any domain name under co.il or org.il).
+             : Code checked to be valid XHTML 1.0 Transitional at http://validator.w3.org/ .
+             : New release - version 0.1.0.
+
+2005/11/16 - Uri Even-Chen <uri@speedy.net>
+             : Disabled function setfocus() when there is a query.
+
+2005/11/05 - Uri Even-Chen <uri@speedy.net>
+             : Modified the table HTML code.
+             : Assign height to all table rows.
+             : Added function setfocus().
+             : Added CSS classes.
+             : Moved whois.utils.php to phpwhoisutils directory.
+             : Removed IP links in function showHTML().
+
+2005/10/28 - Pasi Suominen <pasiz@pasiz.net>
+             : Added css tag to validation
+             : Added cvs tags to files
+
+2005/10/27 - Uri Even-Chen <uri@speedy.net>
+             : Removed XML tag from index.php.
+
+2005/10/25 - Uri Even-Chen <uri@speedy.net>
+             : First release - version 0.0.1
+

@@ -1,0 +1,68 @@
+Speedy Whois - A website for whois queries, based on the phpWhois class.
+Copyleft by Uri Even-Chen, Speedy Software.
+http://www.speedywhois.com/
+
+Introduction
+------------
+
+Speedy Whois allows you to create your own whois website in minutes.  It 
+is based on the phpWhois class.
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+Requirements
+------------
+
+phpWhois requires PHP 4.3.0 or better with OpenSSL support to work 
+properly.  Without SSL support you will not be able to query domains 
+which do not have a whois server but that have a https based whois. 
+Also, you can run it in lower PHP versions but without timeout control. 
+phpWhois will not work with PHP versions below 4.1.0.
+
+If you have a firewall, open port 43 (whois) for outgoing connections.
+
+Installation
+------------
+
+Unzip this package into your website.  The files under the main 
+directory of this package (index.php) should be under the document root.
+The rest of the files you can move if you want to, as long as you change
+the includes in index.php.  You can also keep these files under the
+document root, there are no known problems or security risks.
+
+When everything works, feel free to change whatever you like, including
+the name of your whois website.  It's free software!  Of course you can
+link to www.speedywhois.net if you want to, but you don't have to.
+
+This package
+------------
+
+This package contains the following files:
+
+main directory:
+   index.php - main file.
+
+docs directory:
+   CHANGES - change log.
+   LICENSE - a copy of the GNU General Public License.
+   README - this file.
+
+phpwhois directory:
+   This is a complete copy of the phpWhois class.
+
+phpwhoisutils directory:
+   whois.utils.php - updated.
+
+Any questions?
+--------------
+
+Please contact Uri Even-Chen <uri@speedy.net> for any questions you have.
+
