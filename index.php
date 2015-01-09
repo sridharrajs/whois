@@ -26,184 +26,71 @@ header('Content-Type: text/html; charset=UTF-8');
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Speedy Whois - Check the owner of any domain name!</title>
-<script type="text/javascript"><!--
-
-{
-   if (top != self)
-   {
-      top.location= self.location;
-   }
-}
-
-<?php
-if (!(strlen($query) > 0))
-{
-?>
-function setfocus()
-{
-   document.queryform.query.focus();
-   return;
-}
-
-<?php
-}
-?>
-//--></script>
-<style type="text/css"><!--
-
-a:link
-{
-   text-decoration : underline;
-   color : #0000CC;
-   background-color : transparent;
-}
-
-a:visited
-{
-   text-decoration : underline;
-   color : #0000CC;
-   background-color : transparent;
-}
-
-a:hover
-{
-   text-decoration : underline;
-   color : #FF0000;
-   background-color : transparent;
-}
-
-a:active
-{
-   text-decoration : underline;
-   color : #990099;
-   background-color : transparent;
-}
-
-a.black:link
-{
-   text-decoration : none;
-   color : #000000;
-   background-color : transparent;
-}
-
-a.black:visited
-{
-   text-decoration : none;
-   color : #000000;
-   background-color : transparent;
-}
-
-a.black:hover
-{
-   text-decoration : none;
-   color : #FF0000;
-   background-color : transparent;
-}
-
-a.black:active
-{
-   text-decoration : none;
-   color : #990099;
-   background-color : transparent;
-}
-
-.upperrow
-{
-   height : 38px;
-}
-
-.middlerow
-{
-   height : 24px;
-}
-
-.lowerrow
-{
-   height : 36px;
-}
-
-.queryinput
-{
-	width: 200px;
-}
-
-//--></style>
+<title>Whois Lookup</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="octicons/octicons.css">
+<link rel="stylesheet" type="text/css" href="css/docs.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body text="#000000" link="#0000CC" vlink="#0000CC" alink="#FF0000" bgcolor="#FFFFFF"<?php
-if (!(strlen($query) > 0))
-{
-?> onload="setfocus();"<?php
-}
-?>>
+<body>
+<h2 class="text-center"> Whois Lookup </h2>
+<br/>
 <center>
-<b><font face="Arial" size="+3">Speedy Whois</font></b><br />
-<b><font face="Arial" size="+1">Check the owner of any domain name!</font></b><br />
-<br />
-<?php
-if (strlen($query) > 0)
-{
-?>
-<table cellpadding="0" cellspacing="0" border="0" width="728" dir="ltr">
-<tr align="left" valign="top"><td>
-<?php
-   include_once('phpwhois/whois.main.php');
-   include_once('phpwhoisutils/whois.utils.php');
+ <div class="input-group text-center" style="width:300px">
+      <input type="text" id="domainInp" class="form-control" style="width: 400px;font-size: 30px;height: 50px;" placeholder="example.com">
+      <span class="input-group-btn">
+        <button class="btn btn-default" id="getBtn" style = "font-size:23px;height:50px" type="button">Look up</button>
+      </span>
+    </div>
+    </center>
+<br/>
+<br/>
 
-   $whois= new Whois();
-   $result= $whois->Lookup($query);
+<div class="container" style="display:hidden;"> 
+<div class="row">
+<div class="alexa col-md-12 text-center"></div>
+   <br/>
+   <br/>
+   <div class="general col-md-12"></div>
+</div>
+<br/>
+<br/>
+<div class="row">
+<div class="domain col-md-3"></div>
+<div class="register col-md-3"></div>
+<div class="admin col-md-3"></div>
+<div class="tech col-md-3"></div>
+</div>
+</div>
 
-   echo "<br />\n";
-   echo "<b>Results for " . $query . ":</b><br />\n";
-   echo "<br />\n";
+<footer class="text-center">
+File bugs
+<a href="https://github.com/sridharrajs/whois/issues" target="_blank"><span class="octicon octicon-issue-opened"></span></a>
+<br/>
+    <div class="bs-docs-social">
+  <ul class="bs-docs-social-buttons">
+    <li>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=sridharrajs&repo=whois&type=watch&count=true" width="100" height="20" title="Star on GitHub"></iframe>
+    </li>
+    <li>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=sridharrajs&amp;repo=whois&amp;type=fork&amp;count=true" width="102" height="20" title="Fork on GitHub"></iframe>
+    </li>
+    
+    <li>
+<iframe src="http://ghbtns.com/github-btn.html?user=sridharrajs&type=follow&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>
+    </li>
+  </ul>
+  <br/>
+  Designed and built with <i class="glyphicon glyphicon-heart"></i> by 
+<a href="https://github.com/sridharrajs/" target="_blank">@sridharrajs</a>
+</div>
+</footer>
 
-   if (!empty($result['rawdata']))
-   {
-      $utils= new utils;
-      echo $utils->showHTML($result);
-   }
-   else
-   {
-      echo implode($whois->Query['errstr'],"<br />\n");
-   }
+<script type="text/javascript" src="js/jQuery v1.11.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
 
-   echo "<br />\n";
-?>
-</td></tr>
-</table><br />
-<?php
-}
-else
-{
-?>
-<blockquote>
-</blockquote>
-<?php
-}
-?>
-<form name="queryform" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-<table cellpadding="6" cellspacing="0" border="0" width="540" dir="ltr">
-<tr><td bgcolor="#92CAFE">
-<table width="100%" cellpadding="0" cellspacing="0" border="0" dir="ltr">
-   <tr class="upperrow">
-      <td align="left" valign="top" nowrap="nowrap"><font face="Arial" size="+0"><b>Enter any domain name:</b></font></td>
-   </tr>
-   <tr class="middlerow">
-      <td align="center" valign="middle" nowrap="nowrap"><input type="text" name="query" value="" class="queryinput" />&nbsp;<input type="submit" name="submit" value="Check Domain" /></td>
-   </tr>
-   <tr class="lowerrow">
-      <td align="right" valign="bottom"></td>
-   </tr>
-</table>
-</td></tr>
-</table>
-</form>
-<br />
-<br />
-<font face="Arial" size="+0"><b>Webmasters - <a href="http://www.speedywhois.com/webmasters/" target="_top">Create your own whois website!</a></b></font><br />
-<br />
-<font face="Arial" size="-1"><a href="http://www.speedywhois.com/" target="_top" class="black"><b>Speedy Whois</b></a> is brought to you by <a href="http://www.speedy.net/" target="_top" class="black"><b>Speedy Net</b></a>.</font><br />
-<br />
-</center>
 </body>
 </html>
