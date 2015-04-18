@@ -57,10 +57,10 @@ header('Content-Type: text/html; charset=UTF-8');
 <br/>
 <br/>
 <div class="row">
-<div class="domain col-md-3"></div>
-<div class="register col-md-3"></div>
-<div class="admin col-md-3"></div>
-<div class="tech col-md-3"></div>
+<div class="domain col-md-3 fit"></div>
+<div class="register col-md-3 fit"></div>
+<div class="admin col-md-3 fit"></div>
+<div class="tech col-md-3 fit"></div>
 </div>
 </div>
 
