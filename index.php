@@ -21,7 +21,7 @@ header('Content-Type: text/html; charset=UTF-8');
     <form>
         <div class="input-group text-center" style="width:300px">
             <input type="text" id="domainInp" class="form-control" required
-                   style="width: 400px;font-size: 30px;height: 50px;"
+                   style="width: 400px;font-size: 30px;height: 50px;" autofocus="autofocus"
                    placeholder="example.com">
       <span class="input-group-btn">
         <button class="btn btn-default" id="getBtn" style="font-size:23px;height:50px" type="button">Look up</button>
