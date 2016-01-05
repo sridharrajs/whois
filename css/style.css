@@ -3,50 +3,61 @@ a:link {
     color: #0000CC;
     background-color: transparent;
 }
+
 a:visited {
     text-decoration: underline;
     color: #0000CC;
     background-color: transparent;
 }
+
 a:hover {
     text-decoration: underline;
     color: #FF0000;
     background-color: transparent;
 }
+
 a:active {
     text-decoration: underline;
     color: #990099;
     background-color: transparent;
 }
+
 a.black:link {
     text-decoration: none;
     color: #000000;
     background-color: transparent;
 }
+
 a.black:visited {
     text-decoration: none;
     color: #000000;
     background-color: transparent;
 }
+
 a.black:hover {
     text-decoration: none;
     color: #FF0000;
     background-color: transparent;
 }
+
 a.black:active {
     text-decoration: none;
     color: #990099;
     background-color: transparent;
 }
+
 .upperrow {
     height: 38px;
 }
+
 .middlerow {
     height: 24px;
 }
+
 .lowerrow {
     height: 36px;
 }
+
 .queryinput {
     width: 200px;
 }
@@ -56,6 +67,11 @@ a.black:active {
     font-size: 30px;
     height: 50px;
 }
-.fit{
-  word-wrap: break-word;
+
+.fit {
+    word-wrap: break-word;
+}
+
+.error {
+    color: red;
 }
