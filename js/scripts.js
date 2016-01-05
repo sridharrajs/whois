@@ -8,42 +8,47 @@ $(document).ready(function() {
                 query: domain
             },
             success: function(response) {
-                var generalInfo = response.split('Registrant ID:');
-                var registerInfo = generalInfo[1].split('Admin ID:');
-                var adminInfo = registerInfo[1].split('Tech ID:');
-                var techInfo = adminInfo[1];
-                var domainInfo = generalInfo[0].split('Domain ID:');
-                $('.general').html(domainInfo[0].replace(/<br\/>/g, ''));
-                $('.domain').html(domainInfo[1]);
-                $('.register').html(registerInfo[0]);
-                $('.admin').html(adminInfo[0]);
-                $('.tech').html(techInfo);
-                $.get("AlexaProcessor.php", {
-                    query: domain
-                }).done(function(alexaInfo) {
-                    $('.alexa').html(alexaInfo);
-                });
-                $('#getBtn').text('Look up');
-                $('.container').show();
-                return 'done';
+                console.log(response);
+                $info.html(response);
+                return;
+
+                //var generalInfo = response.split('Registrant ID:');
+                //var registerInfo = generalInfo[1].split('Admin ID:');
+                //var adminInfo = registerInfo[1].split('Tech ID:');
+                //var techInfo = adminInfo[1];
+                //var domainInfo = generalInfo[0].split('Domain ID:');
+                //$('.general').html(domainInfo[0].replace(/<br\/>/g, ''));
+                //$('.domain').html(domainInfo[1]);
+                //$('.register').html(registerInfo[0]);
+                //$('.admin').html(adminInfo[0]);
+                //$('.tech').html(techInfo);
+                //$.get("AlexaProcessor.php", {
+                //    query: domain
+                //}).done(function(alexaInfo) {
+                //    $('.alexa').html(alexaInfo);
+                //});
+                //$('#getBtn').text('Look up');
+                //$('.container').show();
+                //return 'done';
             },
             error: function(ex) {
                 console.log(ex);
             }
         });
     }
-
+    var $info = $('.info');
     $('#getBtn').click(function() {
         resetDisplay();
         var domain = $('#domainInp').val();
         $('#getBtn').text('Loading...');
-        $.when(getDomainInfo(domain)).done(function(domainInfo) {
-            $.get("AlexaProcessor.php", {
-                query: domain
-            }).done(function(alexaInfo) {
-                $('.alexa').html(alexaInfo);
-            });
-        });
+        getDomainInfo(domain)
+        //$.when(getDomainInfo(domain)).done(function(domainInfo) {
+        //    $.get("AlexaProcessor.php", {
+        //        query: domain
+        //    }).done(function(alexaInfo) {
+        //        $('.alexa').html(alexaInfo);
+        //    });
+        //});
     });
 
     function resetDisplay() {

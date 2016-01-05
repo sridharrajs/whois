@@ -42,7 +42,7 @@ header('Content-Type: text/html; charset=UTF-8');
 <br/>
 <br/>
 
-<div class="container" style="display:hidden;"> 
+<div class="container">
 <div class="row">
 <div class="alexa col-md-12 text-center"></div>
    <br/>
@@ -52,6 +52,8 @@ header('Content-Type: text/html; charset=UTF-8');
 <br/>
 <br/>
 <div class="row">
+    <div class="info col-md-12"></div>
+
 <div class="domain col-md-3 fit"></div>
 <div class="register col-md-3 fit"></div>
 <div class="admin col-md-3 fit"></div>
