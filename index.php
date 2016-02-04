@@ -82,6 +82,7 @@ header('Content-Type: text/html; charset=UTF-8');
         var u = "//sridhar.co/piwik/";
         _paq.push(['setTrackerUrl', u + 'piwik.php']);
         _paq.push(['setSiteId', 4]);
+        _paq.push(['enableHeartBeatTimer']);
         var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
         g.type = 'text/javascript';
         g.async = true;
