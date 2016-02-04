@@ -79,7 +79,7 @@ header('Content-Type: text/html; charset=UTF-8');
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function () {
-        var u = "//sridhar.co/piwik/";
+        var u = "//piwik.sridhar.co/";
         _paq.push(['setTrackerUrl', u + 'piwik.php']);
         _paq.push(['setSiteId', 4]);
         _paq.push(['enableHeartBeatTimer']);
